@@ -7,6 +7,8 @@ export const env = createEnv({
       .enum(["development", "test", "production"])
       .default("development"),
     PORT: z.coerce.number().default(1337),
+    COMMON_RATE_LIMIT_MAX_REQUESTS: z.coerce.number().default(100), // Limit each IP to 100 requests per `window`
+    COMMON_RATE_LIMIT_WINDOW_MS: z.coerce.number().default(15 * 60 * 1000), // 15 minutes
   },
   runtimeEnv: process.env,
   emptyStringAsUndefined: true,
