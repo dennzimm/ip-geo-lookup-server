@@ -1,4 +1,14 @@
-# ip-geo-lookup-server
+# IP Geolocation Server
+
+This is the server-side application for the IP Geolocation Service. It handles requests from the client, performs IP geolocation lookups using an external service, and returns the geolocation data.
+
+## Features
+
+- REST API for IP geolocation lookup
+- Uses external IP lookup service (e.g., [ip-api.com](https://ip-api.com/))
+- Input validation and error handling
+
+## Installation
 
 To install dependencies:
 
@@ -6,10 +16,24 @@ To install dependencies:
 bun install
 ```
 
-To run:
+To run in dev/watch mode
 
 ```bash
-bun run src/index.ts
+bun run dev
 ```
 
-This project was created using `bun init` in bun v1.1.15. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+To build
+
+```bash
+bun run build
+```
+
+To run
+
+```bash
+bun run start | bun run start:build
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
