@@ -1,10 +1,11 @@
-import dotenv from 'dotenv';
 import cors from 'cors';
+import dotenv from 'dotenv';
 import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { apiRouter } from './api';
 import { healthCheckRouter } from './api/health-check/health-check.router';
+import { welcomeRouter } from './api/welcome/welcome.router';
 import { isDevelopment } from './env';
 import { errorHandlerMiddleware } from './middlewares/error-handler.middleware';
 import { rateLimiterMiddleware } from './middlewares/rate-limiter.middleware';
@@ -20,6 +21,7 @@ app.use(cors());
 app.use(express.json());
 app.use(rateLimiterMiddleware);
 
+app.use('/', welcomeRouter);
 app.use('/health-check', healthCheckRouter);
 app.use('/api', apiRouter);
 
