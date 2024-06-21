@@ -9,7 +9,8 @@
     "start:build": "bun run ./dist/index.js",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "format": "prettier --config .prettierrc --write ."
+    "format": "prettier --config .prettierrc --write .",
+    "vercel-build": "echo 'Skipping build in production...'"
   },
   "devDependencies": {
     "@types/bun": "latest",
