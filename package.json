@@ -10,7 +10,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --config .prettierrc --write .",
-    "vercel-build": "echo 'Skipping build in production...'"
+    "vercel-build": "echo 'Skipping build in production....'"
   },
   "devDependencies": {
     "@types/bun": "latest",
