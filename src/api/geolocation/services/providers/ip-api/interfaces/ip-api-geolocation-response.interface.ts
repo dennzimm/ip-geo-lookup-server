@@ -1,4 +1,4 @@
-import type { IpApiGeolocationStatus } from "../enums/ip-api-geolocation-status.enum";
+import type { IpApiGeolocationStatus } from '../enums/ip-api-geolocation-status.enum';
 
 export interface IpApiGeolocationResponse {
   status: IpApiGeolocationStatus;

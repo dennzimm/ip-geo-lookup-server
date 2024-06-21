@@ -1,4 +1,4 @@
 export enum IpApiGeolocationStatus {
-  SUCCESS = "success",
-  FAIL = "fail",
+  SUCCESS = 'success',
+  FAIL = 'fail',
 }
