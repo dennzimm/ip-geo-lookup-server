@@ -4,6 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "bun --hot run src/index.ts",
+    "build": "bun run ./scripts/build.script.ts",
+    "start": "bun run ./src/index.ts",
+    "start:build": "bun run ./dist/index.js",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --config .prettierrc --write ."
