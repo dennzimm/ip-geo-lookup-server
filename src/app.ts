@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
@@ -8,6 +9,8 @@ import { isDevelopment } from './env';
 import { errorHandlerMiddleware } from './middlewares/error-handler.middleware';
 import { rateLimiterMiddleware } from './middlewares/rate-limiter.middleware';
 import { unexpectedRequestMiddleware } from './middlewares/unexpected-request.middleware';
+
+dotenv.config();
 
 export const app = express();
 
