@@ -5,7 +5,7 @@ import { handleServiceResponse } from '../../utils/service-response.util';
 
 class HealthCheckController {
   public performHealthCheck = (_req: Request, res: Response): void => {
-    handleServiceResponse(new ServiceResponse(ResponseStatus.Success, 'Service is healthy', null, StatusCodes.OK), res);
+    handleServiceResponse(new ServiceResponse(ResponseStatus.SUCCESS, 'Service is healthy', null, StatusCodes.OK), res);
   };
 }
 

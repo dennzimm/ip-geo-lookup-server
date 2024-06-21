@@ -3,10 +3,26 @@ import type { GeolocationResponse } from '../../../interfaces/geolocation-respon
 import { AbstractGeolocationLookupService } from '../../abstract-geolocation-lookup.service';
 import type { IpApiGeolocationResponse } from './interfaces/ip-api-geolocation-response.interface';
 
+/**
+ * A service for retrieving geolocation information using the IP-API provider.
+ */
 export class IpApiProviderService extends AbstractGeolocationLookupService {
   public readonly BASE_API_URL = 'http://ip-api.com/json';
 
-  private static mapToGeolocationResponse({ country, regionName, city, zip, lat, lon }: IpApiGeolocationResponse) {
+  /**
+   * Maps the IP-API geolocation response to the GeolocationResponse interface.
+   *
+   * @param {IpApiGeolocationResponse} response - The IP-API geolocation response.
+   * @return {GeolocationResponse} The mapped GeolocationResponse object.
+   */
+  private static mapToGeolocationResponse({
+    country,
+    regionName,
+    city,
+    zip,
+    lat,
+    lon,
+  }: IpApiGeolocationResponse): GeolocationResponse {
     return {
       country,
       regionName,
@@ -17,6 +33,12 @@ export class IpApiProviderService extends AbstractGeolocationLookupService {
     };
   }
 
+  /**
+   * Retrieves the geolocation information for a given IP address.
+   *
+   * @param {string} ip - The IP address to look up.
+   * @return {Promise<GeolocationResponse>} A promise that resolves to the geolocation information.
+   */
   public async getGeolocationByIp(ip: string): Promise<GeolocationResponse> {
     const response = await this.fetchGeolocation(ip);
 

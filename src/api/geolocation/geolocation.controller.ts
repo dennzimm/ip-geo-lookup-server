@@ -23,7 +23,7 @@ class GeolocationController {
       const geolocationData = await this.geolocationService.getGeolocationByIp(req.params.ip);
 
       handleServiceResponse(
-        new ServiceResponse(ResponseStatus.Success, 'Geolocation Found', geolocationData, StatusCodes.OK),
+        new ServiceResponse(ResponseStatus.SUCCESS, 'Geolocation Found', geolocationData, StatusCodes.OK),
         res
       );
     } catch (error) {
