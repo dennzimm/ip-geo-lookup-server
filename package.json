@@ -2,6 +2,7 @@
   "name": "ip-geo-lookup-server",
   "version": "1.0.0",
   "main": "src/index.ts",
+  "description": "This is the server-side application for the IP Geolocation Service. It handles requests from the client, performs IP geolocation lookups using an external service, and returns the geolocation data.",
   "author": "Dennis Zimmermann <https://github.com/dennzimm>",
   "homepage": "https://github.com/dennzimm/ip-geo-lookup-server",
   "repository": {
