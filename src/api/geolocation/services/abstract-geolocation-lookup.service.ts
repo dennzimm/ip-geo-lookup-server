@@ -7,14 +7,6 @@ import type { GeolocationResponse } from '../interfaces/geolocation-response.int
  */
 export abstract class AbstractGeolocationLookupService {
   /**
-   * The base URL for the geolocation lookup service.
-   *
-   * @abstract
-   * @type {string}
-   */
-  public abstract BASE_API_URL: string;
-
-  /**
    * Retrieves the geolocation information for a given IP address.
    *
    * @abstract

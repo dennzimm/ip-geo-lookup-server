@@ -7,7 +7,7 @@ import type { IpApiGeolocationResponse } from './interfaces/ip-api-geolocation-r
  * A service for retrieving geolocation information using the IP-API provider.
  */
 export class IpApiProviderService extends AbstractGeolocationLookupService {
-  public readonly BASE_API_URL = 'http://ip-api.com/json';
+  private readonly BASE_API_URL = 'http://ip-api.com/json';
 
   /**
    * Maps the IP-API geolocation response to the GeolocationResponse interface.
